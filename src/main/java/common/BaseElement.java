@@ -146,7 +146,7 @@ public class BaseElement {
     }
 
     public void sendKeyPress(WebElement element, Keys key){
-        element.sendKeys(Keys.chord(key));
+        element.sendKeys(key);
     }
 
     public void uploadBySendKeys(WebElement element, String path){
