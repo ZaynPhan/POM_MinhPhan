@@ -1,4 +1,5 @@
 package common;
+import com.sun.istack.internal.NotNull;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.interactions.Action;
@@ -64,6 +65,7 @@ public class BaseElement {
         return combobox.getFirstSelectedOption().getText();
     }
 
+    @NotNull
     public String getAtribute(WebElement element, String attribute){
         return element.getAttribute(attribute);
     }
