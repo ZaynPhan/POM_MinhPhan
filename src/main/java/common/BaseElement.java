@@ -1,6 +1,7 @@
 package common;
 import com.sun.istack.internal.NotNull;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.ActionChainExecutor;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -13,6 +14,11 @@ import java.util.Set;
 public class BaseElement {
     protected WebDriver driver;
     private int timeouts = 20;
+
+    public BaseElement(WebDriver driver) {
+        this.driver = driver;
+    }
+
     public void openUrl(String url){
         driver.get(url);
         driver.manage().window().maximize();
